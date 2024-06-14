@@ -11,7 +11,6 @@ import LineChart from "../../Components/LineChart";
 import BarChart from "../../Components/BarChart";
 import PieChart from "../../Components/PieChart";
 import StatBox from "../../Components/StatBox";
-import ProgressCircle from "../../Components/ProgressCircle";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useState } from "react";
