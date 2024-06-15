@@ -41,6 +41,7 @@ const About = () => {
         alignItems={"center"}
         border={'1px solid white'}
         p={'10px'}
+        backgroundColor={colors.primary[600]}
       >
         <img
           alt="profile-user"
