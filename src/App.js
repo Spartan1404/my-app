@@ -14,6 +14,7 @@ import Bar from "./Scenes/Bar";
 import Pie from "./Scenes/Pie";
 import Line from "./Scenes/Line.jsx";
 import Geography from "./Scenes/Geography/index.jsx";
+import About from "./Scenes/About/index.jsx";
 
 function App() {
     const [theme, colorMode] = useMode()
@@ -37,6 +38,7 @@ function App() {
                             <Route path="/pie" element={<Pie/>}/>
                             <Route path="/line" element={<Line/>}/>
                             <Route path="/geography" element={<Geography/>}/>
+                            <Route path="/about" element={<About/>}/>
                         </Routes>
                     </main>
                 </div>
