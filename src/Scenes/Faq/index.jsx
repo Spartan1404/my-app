@@ -3,19 +3,21 @@ import Header from "../../Components/Header";
 import {Accordion, AccordionSummary, AccordionDetails} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { tokens } from "../../theme";
+import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [t, i18n] = useTranslation()
 
   return (
     <Box m={"0 1.5rem"}>
 
-      <Header title={"FAQ"} subtitle={"Frequently Asked Questions Page"} />
+      <Header title={"FAQ"} subtitle={t("Frequently Asked Questions Page")} />
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
             <Typography color={colors.greenAccent[500]} variant="h5">
-                Important question
+                {t('Important question')}
             </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -27,7 +29,7 @@ const FAQ = () => {
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
             <Typography color={colors.greenAccent[500]} variant="h5">
-                Important question 2
+            {t('Important question 2')}
             </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -39,7 +41,7 @@ const FAQ = () => {
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
             <Typography color={colors.greenAccent[500]} variant="h5">
-                Important question 3
+            {t('Important question 3')}
             </Typography>
         </AccordionSummary>
         <AccordionDetails>

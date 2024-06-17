@@ -14,10 +14,12 @@ import StatBox from "../../Components/StatBox";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [t, i18n] = useTranslation()
   const buttonGroupSX = { color: colors.greenAccent[500], fontWeight: "400" };
   const [selectedButton, setSelectedButton] = useState("left");
 
@@ -28,7 +30,7 @@ const Dashboard = () => {
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Header title={"Dashboard"} subtitle={"Welcome"} />
+        <Header title={t("Dashboard")} subtitle={t("Welcome")} />
 
         <Box>
           <Button
@@ -42,7 +44,7 @@ const Dashboard = () => {
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "0.6rem" }} />
-            Download All Reports
+            {t('Download All Reports')}
           </Button>
         </Box>
       </Box>
@@ -63,7 +65,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={"12,345"}
-            subtitle={"Emails Sent"}
+            subtitle={t('Emails Sent')}
             progress={"0.75"}
             increase={"+14%"}
             icon={
@@ -82,7 +84,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={"435,345"}
-            subtitle={"Sales Obtained"}
+            subtitle={t("Sales Obtained")}
             progress={"0.5"}
             increase={"+23%"}
             icon={
@@ -101,7 +103,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={"132,335"}
-            subtitle={"New Clients"}
+            subtitle={t("New Clients")}
             progress={"0.3"}
             increase={"+5%"}
             icon={
@@ -120,7 +122,7 @@ const Dashboard = () => {
         >
           <StatBox
             title={"8,612,345"}
-            subtitle={"Traffic Inbound"}
+            subtitle={t("Traffic Inbound")}
             progress={"0.80"}
             increase={"+44%"}
             icon={
@@ -150,7 +152,7 @@ const Dashboard = () => {
                 fontWeight={"600"}
                 color={colors.grey[100]}
               >
-                Revenue Generated
+                {t('Revenue Generated')}
               </Typography>
               <Typography
                 variant="h3"
@@ -170,13 +172,13 @@ const Dashboard = () => {
                 variant="text"
               >
                 <ToggleButton value={"left"} sx={buttonGroupSX}>
-                  Line Chart
+                  {t('Line Chart')}
                 </ToggleButton>
                 <ToggleButton value={"center"} sx={buttonGroupSX}>
-                  Bar Chart
+                  {t('Bar Chart')}
                 </ToggleButton>
                 <ToggleButton value={"right"} sx={buttonGroupSX}>
-                  Pie Chart
+                  {t('Pie Chart')}
                 </ToggleButton>
               </ToggleButtonGroup>
             </Box>
@@ -215,7 +217,7 @@ const Dashboard = () => {
               fontWeight={"600"}
               p={'1rem'}
             >
-              Recent Transactions
+              {t('Recent Transactions')}
             </Typography>
           </Box>
           {mockTransactions.map((transaction, i) => (

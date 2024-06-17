@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../../Components/Header";
+import { useTranslation } from "react-i18next";
 
 const initialValues = {
   firstName: "",
@@ -25,6 +26,7 @@ const userSchema = yup.object().shape({
 
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
+  const [t, i18n] = useTranslation()
 
   const handleFormSubmit = (values) => {
     console.log(values);

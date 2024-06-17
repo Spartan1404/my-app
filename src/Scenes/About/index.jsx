@@ -3,11 +3,13 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import Divider from '@mui/material/Divider';
+import { useTranslation } from "react-i18next";
 
 
 const About = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [t, i18n] = useTranslation()
 
   return (
     <Box margin={'30px'}>
@@ -28,12 +30,12 @@ const About = () => {
         />
         
         <Typography variant="h2">Carlos Raúl Robinson</Typography>
-        <Typography variant="h2" color={colors.greenAccent[500]}> Junior Front-end Developer</Typography>
+        <Typography variant="h2" color={colors.greenAccent[500]}>{t('Junior Front-end Developer')}</Typography>
       </Box>
 
       <Divider/>
 
-      <Box m={'20px'} display={'flex'} justifyContent={'center'}><Typography fontWeight={'bold'} variant="h3">Technologies in this project:</Typography></Box>
+      <Box m={'20px'} display={'flex'} justifyContent={'center'}><Typography fontWeight={'bold'} variant="h3">{t('Technologies in this project:')}</Typography></Box>
 
       <Box
         display={"flex"}

@@ -4,6 +4,9 @@ import Topbar from "./Scenes/Global/topbar";
 import Dashboard from "./Scenes/Dashboard"
 import MySidebar from "./Scenes/Global/mysidebar"
 import { Route, Routes } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "./i18n"
+import { useEffect } from "react";
 import Team from "./Scenes/Team/index"
 import Contacts from "./Scenes/Contacts/index"
 import Invoices from "./Scenes/Invoices/index"
@@ -18,6 +21,10 @@ import About from "./Scenes/About/index.jsx";
 
 function App() {
     const [theme, colorMode] = useMode()
+    const [t, i18n] = useTranslation()
+    useEffect(() => {
+        i18n.changeLanguage(navigator.language)
+    }, [])
     return (
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
