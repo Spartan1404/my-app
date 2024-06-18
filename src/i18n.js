@@ -26,7 +26,7 @@ i18n.use(initReactI18next).init({
                 'City': 'Ciudad',
                 'ZipCode': 'Código Zip',
                 "Register ID": 'ID de Registro',
-                'Dashboard': 'Panel de Control',
+                'Dashboard': 'Panel Principal',
                 'Welcome': "Bienvenido",
                 'Download All Reports': 'Descargar todos los reportes',
                 'Revenue Generated': 'Ingresos generados',
@@ -40,7 +40,25 @@ i18n.use(initReactI18next).init({
                 "Frequently Asked Questions Page": 'Página de preguntas frecuentes',
                 'Important question': 'Pregunta importante',
                 'Important question 2': 'Pregunta importante 2',
-                'Important question 3': 'Pregunta importante 3'
+                'Important question 3': 'Pregunta importante 3',
+                'Required field': 'Campo requerido',
+                'First Name': 'Nombre',
+                "Last Name": 'Apellidos',
+                "Contact Number": 'Número de contacto',
+                "Address 1": 'Dirección 1',
+                "Address 2": 'Dirección 2',
+                'Create New User': 'Crear nuevo usuario',
+                'Choropleth Map': 'Mapa coroplético',
+                "First Big React Project": 'Primer proyecto grande con React',
+                'Data': 'Datos',
+                "Manage Team": 'Gestionar equipo',
+                "Contacts Info": 'Información de contactos',
+                "Invoices Balances": 'Saldos de facturas',
+                'Pages': 'Páginas',
+                "Profile Form": "Formulario de perfil",
+                "FAQ": 'Preguntas Frecuentes',
+                'Charts': "Gráficas"
+
             }
         }
     }

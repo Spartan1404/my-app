@@ -15,18 +15,18 @@ const initialValues = {
 };
 const phoneRegex = /^7|5 ?[0-9]{7}$/gm;
 
-const userSchema = yup.object().shape({
-  firstName: yup.string().required("Required"),
-  lastName: yup.string().required("Required"),
-  email: yup.string().email("Invalid email").required("Required"),
-  contact: yup.string().matches(phoneRegex, "Phone number is not valid").required("Required"),
-  address: yup.string().required("Required"),
-  address2: yup.string().required("Required"),
-});
-
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const [t, i18n] = useTranslation()
+
+  const userSchema = yup.object().shape({
+    firstName: yup.string().required(t('Required field')),
+    lastName: yup.string().required(t('Required field')),
+    email: yup.string().email("Invalid email").required(t('Required field')),
+    contact: yup.string().matches(phoneRegex, "Phone number is not valid").required(t('Required field')),
+    address: yup.string().required(t('Required field')),
+    address2: yup.string().required(t('Required field')),
+  });
 
   const handleFormSubmit = (values) => {
     console.log(values);
@@ -61,7 +61,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="First Name"
+                label={t("First Name")}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.firtsName}
@@ -74,7 +74,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Last Name"
+                label={t("Last Name")}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.lastName}
@@ -100,7 +100,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Contact Number"
+                label={t("Contact Number")}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.contact}
@@ -113,7 +113,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Address 1"
+                label={t("Address 1")}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.address}
@@ -126,7 +126,7 @@ const Form = () => {
                 fullWidth
                 variant="filled"
                 type="text"
-                label="Address 2"
+                label={t("Address 2")}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.address2}
@@ -138,7 +138,7 @@ const Form = () => {
             </Box>
             <Box display={"flex"} justifyContent={"end"} mt={"1rem"}>
               <Button type="submit" color="secondary" variant="contained">
-                Create New User
+                {t('Create New User')}
               </Button>
             </Box>
           </form>

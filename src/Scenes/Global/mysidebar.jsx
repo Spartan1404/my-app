@@ -17,10 +17,12 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import { useTranslation } from "react-i18next";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  
   return (
     <MenuItem
       active={selected === title}
@@ -37,8 +39,9 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const MySidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [t, i18n] = useTranslation()
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selected, setSelected] = useState("Dashboard");
+  const [selected, setSelected] = useState(t("Dashboard"));
 
   return (
     <Box
@@ -105,10 +108,10 @@ const MySidebar = () => {
                   fontWeight={"bold"}
                   sx={{ m: "0.5rem 0 0 0" }}
                 >
-                  It's a me, Carlos!
+                  Carlos Raul
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  First Big React Project
+                  {t("First Big React Project")}
                 </Typography>
               </Box>
             </Box>
@@ -117,7 +120,7 @@ const MySidebar = () => {
           {/* Menu itmes */}
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
-              title="Dashboard"
+              title={t("Dashboard")}
               to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
@@ -128,24 +131,24 @@ const MySidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Data
+              {t('Data')}
             </Typography>
             <Item
-              title="Manage"
+              title={t("Manage Team")}
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Contacts Info"
+              title={t("Contacts Info")}
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Invoices Balances"
+              title={t("Invoices Balances")}
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
@@ -156,24 +159,24 @@ const MySidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Pages
+              {t('Pages')}
             </Typography>
             <Item
-              title="Profile Form"
+              title={t("Profile Form")}
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
+              title={t("Calendar")}
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="FAQ"
+              title={t("FAQ")}
               to="/faq"
               icon={<HelpOutlinedIcon />}
               selected={selected}
@@ -184,24 +187,24 @@ const MySidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Charts
+              {t('Charts')}
             </Typography>
             <Item
-              title="Bar Chart"
+              title={t("Bar Chart")}
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Pie Chart"
+              title={t("Pie Chart")}
               to="/pie"
               icon={<PieChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Line Chart"
+              title={t("Line Chart")}
               to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
