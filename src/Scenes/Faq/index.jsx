@@ -13,7 +13,7 @@ const FAQ = () => {
   return (
     <Box m={"0 1.5rem"}>
 
-      <Header title={"FAQ"} subtitle={t("Frequently Asked Questions Page")} />
+      <Header title={t("FAQ")} subtitle={t("Frequently Asked Questions Page")} />
       <Accordion defaultExpanded>
         <AccordionSummary expandIcon={<ExpandMoreIcon/>}>
             <Typography color={colors.greenAccent[500]} variant="h5">

@@ -6,31 +6,33 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../Components/Header";
+import { useTranslation } from "react-i18next";
 //import { AddBox } from "@mui/icons-material";
 
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [t, i18n] = useTranslation()
   const columns = [
     { field: "id", headerName: "ID" },
     {
       field: "name",
-      headerName: "Name",
+      headerName: t("Name"),
       flex: 1,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
-      headerName: "Age",
+      headerName: t("Age"),
       type: "number",
       headerAlign: "left",
       align: "left",
     },
-    { field: "phone", headerName: "Phone", flex: 1 },
-    { field: "email", headerName: "Email", flex: 1 },
+    { field: "phone", headerName: t("Phone"), flex: 1 },
+    { field: "email", headerName: t("Email"), flex: 1 },
     {
       field: "Access",
-      headerName: "Access",
+      headerName: t("Access"),
       renderCell: ({ row: { access } }) => {
         return (
           <Box
@@ -59,7 +61,7 @@ const Team = () => {
   ];
   return (
     <Box m="0px 1rem">
-      <Header title="TEAM" subtitle={"Manage team members"} />
+      <Header title={t("Team")} subtitle={t("Manage team members")} />
       <Box
         m={"auto"}
         height={"75vh"}

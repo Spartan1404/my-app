@@ -30,7 +30,7 @@ i18n.use(initReactI18next).init({
                 'Welcome': "Bienvenido",
                 'Download All Reports': 'Descargar todos los reportes',
                 'Revenue Generated': 'Ingresos generados',
-                'Line Chart': 'Gráfico de linea',
+                'Line Chart': 'Gráfico de línea',
                 'Pie Chart': 'Grafico de pastel',
                 'Recent Transactions': 'Transacciones recientes',
                 'Emails Sent': 'Emails Enviados',
@@ -57,8 +57,20 @@ i18n.use(initReactI18next).init({
                 'Pages': 'Páginas',
                 "Profile Form": "Formulario de perfil",
                 "FAQ": 'Preguntas Frecuentes',
-                'Charts': "Gráficas"
-
+                'Charts': "Gráficas",
+                'Information': 'Información',
+                "About": 'Acerca de',
+                "Form": 'Formulario',
+                "Simple form": 'Formulario simple',
+                "Access": 'Acceso',
+                "Team": 'Equipo',
+                "Manage team members": 'Gestionar miembros del equipo',
+                "Simple Pie Chart": 'Grafico de pastel simple',
+                "Simple Line Chart": 'Gráfico de línea simple',
+                "Cost": 'Costo',
+                "Date": 'Fecha',
+                "Invoices": 'Facturas',
+                "List of invoice balance": 'Lista de saldo de factura'
             }
         }
     }

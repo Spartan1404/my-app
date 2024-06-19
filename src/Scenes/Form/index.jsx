@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
     <Box m={"1.5rem"}>
-      <Header title={""} subtitle={""} />
+      <Header title={t("Form")} subtitle={t("Simple form")} />
       <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}
